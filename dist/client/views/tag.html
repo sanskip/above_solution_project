@@ -1,0 +1,27 @@
+
+<h1>welcome to Above solution</h1>
+<div class="container">
+<div class="jumbotron">
+
+  <div class="row">
+    <div class="col-lg-6" >
+    <button ng-click="add()" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> ADD</button>
+  </div>
+    <div class="col-lg-6" ng-show="bool">
+      <form class="form-inline" >
+       <div class="form-group">
+         <label for="text">Tag Name:</label>
+         <input type="text" class="form-control" id="id" ng-model="tagname">
+       </div>
+       <button ng-click="addtag()" class="btn btn-success" ng-show="add_bool">Add Tag</button>
+       <button ng-click="edittag(docid)" class="btn btn-info" ng-show="edit_bool">Edit Tag</button>
+     </form>
+    </div>
+  </div>
+  <table>
+      <tr ng-repeat="x in records">
+          <td><button class="btn btn-info"><span ng-click="delete(x._id,x.tagname)" class="glyphicon glyphicon-remove"></span>{{x.tagname}}</button></td>
+  </tr>
+  </table>
+</div>
+</div>
